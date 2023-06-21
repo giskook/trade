@@ -1,4 +1,4 @@
-struct Token{
-    Symbol &str;
-    Denom  f64;
+pub struct Token<'a> {
+    symbol: &'a str,
+    denom: f64,
 }

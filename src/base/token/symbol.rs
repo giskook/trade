@@ -1,3 +1,3 @@
-const USDT: &str = "USDT";
-const FIL: &str = "FIL";
-const DOT: &str = "DOT";
+pub const USDT: &str = "USDT";
+pub const FIL: &str = "FIL";
+pub const DOT: &str = "DOT";
