@@ -8,6 +8,7 @@
 // question: how to forbid the trade when target price sudden fall? so do we need measure the price change rate?
 
 use crate::base::token::token;
+use crate::base::token::price;
 
 // SeesawAbs is a strategy to trade source to target by abs
 // the therahold is the distance of source - target
@@ -15,11 +16,11 @@ use crate::base::token::token;
 pub struct SeesawAbs<'a> {
     source_coin: &'a token::Token<'a>,
     target_coin: &'a token::Token<'a>,
-    therahold: &'a token::Token<'a>,
+    therahold: &'a price::Price<'a>,
 }
 
 impl<'a> SeesawAbs<'a>{
-    pub fn new(therahold: &'a token::Token) -> SeesawAbs<'a>{
+    pub fn new(therahold: &'a price::Price) -> SeesawAbs<'a>{
         SeesawAbs{
             therahold: therahold,
             ..Default::default()
