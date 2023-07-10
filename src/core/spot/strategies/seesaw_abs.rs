@@ -1,7 +1,7 @@
-struct Strategy1 {
+struct FloatUp {
 }
 
-impl Strategy for Strategy1{
+impl Strategy for FloatUp {
     fn execute(&self) {
     }
 }
